@@ -6,8 +6,8 @@
 *.exe
 *.o
 *.so
-*.classpath
-*.project
+.classpath
+.project
 
 # Packages #
 ############
