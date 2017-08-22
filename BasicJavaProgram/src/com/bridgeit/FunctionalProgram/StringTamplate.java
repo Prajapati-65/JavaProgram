@@ -3,6 +3,7 @@ package com.bridgeit.FunctionalProgram;
 import com.bridgeit.MyUtility.Utility;
 
 public class StringTamplate {
+	
 	public static void main(String[] args) {
 		Utility utility = new Utility();
 		System.out.println("Enter the Username : ");

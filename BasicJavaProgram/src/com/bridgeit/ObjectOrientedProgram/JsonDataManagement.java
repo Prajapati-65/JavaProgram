@@ -9,19 +9,17 @@ import org.json.simple.JSONObject;
 
 public class JsonDataManagement {
 	
-	
 	public static void main(String[] args) {
-		
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter No. of Product : ");
 		int product=scanner.nextInt();
 		int productArray[] = new int[product];
 		System.out.println("Enter the "+product+" product name : ");
-		
 		for (int i = 0; i <= productArray.length; i++) {
 			String str = scanner.nextLine();
+			char strArray[] = str.toCharArray();
 		}
-		String[] strings = new String[]{"Rice","Pulses","Wheats"};
+		String[] strings ={"Rice","Pulses","Wheats"};
 		JSONObject finalObject = new JSONObject();
 		for (String number : strings) 
 		{

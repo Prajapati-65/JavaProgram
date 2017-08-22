@@ -3,6 +3,7 @@ package com.bridgeit.FunctionalProgram;
 import com.bridgeit.MyUtility.Utility;
 
 public class CoinToss {
+
 	public static void main(String[] args) {
 		Utility utility = new Utility();
 		System.out.println("Enter a number");
@@ -18,8 +19,6 @@ public class CoinToss {
 			}
 		}
 		System.out.println("Percentage of heads : " + (double) heads / inputNumber);
-
 		System.out.println("Percentage of tails :  " + ((double) inputNumber - heads) / inputNumber);
-
 	}
 }

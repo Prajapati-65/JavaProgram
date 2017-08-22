@@ -8,7 +8,6 @@ public class PowerOfTwo {
 		Utility utility = new Utility();
 		System.out.println("Enter a integer number ");
 		int inputNumber = utility.inputInteger();
-
 		if (inputNumber < 31) {
 			for (int i = 0; i < inputNumber; i++) {
 				int power = utility.poworOfTwo(i);

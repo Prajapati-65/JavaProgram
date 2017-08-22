@@ -21,8 +21,11 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import com.bridgeit.ObjectOrientedProgram.CompanyShares;
+import com.bridgeit.ObjectOrientedProgram.MyLinkedList;
+
 public class Utility {
-	
+
 	Scanner scanner = new Scanner(System.in);
 	BufferedReader br;
 
@@ -278,7 +281,7 @@ public class Utility {
 	/**
 	 * create a permute method
 	 */
-	public  void permute(String st, int start, int end) {
+	public void permute(String st, int start, int end) {
 		if (start == end) {
 			System.out.println(st);
 		} else {
@@ -293,7 +296,7 @@ public class Utility {
 	/**
 	 * create a method to swap the string
 	 */
-	public  String swap(String st, int a, int b) {
+	public String swap(String st, int a, int b) {
 		char[] ch = st.toCharArray();
 		char temp = ch[a];
 		ch[a] = ch[b];
@@ -532,7 +535,9 @@ public class Utility {
 
 	/**
 	 * @param stringToBeReplaced
-	 * @param replacement replaces string 'stringReplaced' in message with given 'replacement'
+	 * @param replacement
+	 *            replaces string 'stringReplaced' in message with given
+	 *            'replacement'
 	 */
 	public void replace(String replaceString, String replacement) {
 		Pattern pattern = Pattern.compile(replaceString);
@@ -790,7 +795,7 @@ public class Utility {
 		}
 		return returnArray;
 	}
-	
+
 	/**
 	 * Function for Calculating the notes
 	 */
@@ -820,19 +825,20 @@ public class Utility {
 
 	/**
 	 * @param month
-	 *            - month number of the year
+	 *            month number of the year
 	 * @param year
 	 *            fills array of month
 	 */
 	int[][] daysArray;
 	int maxDays, maxWeeks;
+
 	public void fillArray(int month, int year) {
 		String yearAndMonth = month < 10 ? "0" + String.valueOf(month) + " " + String.valueOf(year)
 				: String.valueOf(month) + String.valueOf(year);
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd MM yyyy");
 		try {
 			Date date = simpleDateFormat.parse("01 " + yearAndMonth);
-			Calendar cal= Calendar.getInstance();
+			Calendar cal = Calendar.getInstance();
 			cal.setTime(date);
 			maxDays = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 			maxWeeks = cal.getActualMaximum(Calendar.WEEK_OF_MONTH);
@@ -865,5 +871,56 @@ public class Utility {
 			}
 			System.out.println();
 		}
+	}
+
+	MyLinkedList<CompanyShares> list = new MyLinkedList<CompanyShares>();
+
+	public void startCompanyShare() {
+		System.out.print("Type add to add the stock and remove to remove the stock: ");
+		String move = scanner.next();
+		if (move.equals("add")) {
+			addCompanyShare();
+			startCompanyShare();
+		} else if (move.equals("remove")) {
+			removeCompanyShare();
+			startCompanyShare();
+		} else {
+			scanner.close();
+			return;
+		}
+	}
+
+	public void addCompanyShare() {
+		System.out.print("Enter stock name, number of shares and share price: ");
+		String name = scanner.next();
+		int numberOfShares = scanner.nextInt();
+		int price = scanner.nextInt();
+		CompanyShares stock = new CompanyShares(name, numberOfShares, price);
+		list.add(stock);
+	}
+
+	public void removeCompanyShare() {
+		scanner = new Scanner(System.in);
+		System.out.print("Enter stock name: ");
+		String name = scanner.next();
+		for (int i = 0; i < list.size(); i++) {
+			CompanyShares shareObject;
+			if (name.equals((shareObject = list.get(i)).getName())) {
+				list.remove(shareObject);
+				System.out.println("\nRemoved Succesfully...");
+				printCompanyShare();
+				break;
+			}
+		}
+	}
+
+	public void printCompanyShare() {
+		System.out.println("\nName\tShares\tPrice");
+		for (int i = 0; i < list.size(); i++) {
+			CompanyShares shareObject = list.get(i);
+			System.out.println(
+					shareObject.getName() + "\t" + shareObject.getNumberOfShares() + "\t" + shareObject.getPrice());
+		}
+		System.out.println();
 	}
 }

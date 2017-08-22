@@ -3,7 +3,6 @@ package com.bridgeit.FunctionalProgram;
 import java.util.Random;
 import com.bridgeit.MyUtility.Utility;
 
-
 public class TicTacTeoGame {
 
 	public static void main(String[] args) {
@@ -12,12 +11,10 @@ public class TicTacTeoGame {
 		Random random = new Random();
 		Utility utility = new Utility();
 		TicTacTeoU tictacteoU = new TicTacTeoU();
-
 		int[][] a = new int[3][3];
 		while (tictacteoU.empty(a)) {
 			int i = random.nextInt(3);
 			int j = random.nextInt(3);
-
 			if (a[i][j] == 0)
 				a[i][j] = 1;
 			else
@@ -31,7 +28,6 @@ public class TicTacTeoGame {
 				break;
 			}
 			System.out.println("enter your index");
-
 			int m = utility.inputInteger();
 			int n = utility.inputInteger();
 			if (a[m][n] == 0)
@@ -46,7 +42,6 @@ public class TicTacTeoGame {
 				check++;
 				break;
 			}
-
 		}
 		if (check == 0)
 			System.out.println("ops!! game draw !! no one is winner");

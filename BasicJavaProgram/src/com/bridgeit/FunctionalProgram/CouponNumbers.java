@@ -3,6 +3,7 @@ package com.bridgeit.FunctionalProgram;
 import com.bridgeit.MyUtility.Utility;
 
 public class CouponNumbers {
+	
 	public static void main(String[] args) {
 		Utility utility = new Utility();
 		String string = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";

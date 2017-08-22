@@ -1,6 +1,5 @@
 package com.bridgeit.FunctionalProgram;
 
-
 public class TicTacTeoU {
 	int size = 3;
 
