@@ -1,6 +1,7 @@
 package com.bridgeit.MyUtility;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -21,6 +22,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 public class Utility {
+	
 	Scanner scanner = new Scanner(System.in);
 	BufferedReader br;
 
@@ -276,7 +278,7 @@ public class Utility {
 	/**
 	 * create a permute method
 	 */
-	public static void permute(String st, int start, int end) {
+	public  void permute(String st, int start, int end) {
 		if (start == end) {
 			System.out.println(st);
 		} else {
@@ -291,7 +293,7 @@ public class Utility {
 	/**
 	 * create a method to swap the string
 	 */
-	public static String swap(String st, int a, int b) {
+	public  String swap(String st, int a, int b) {
 		char[] ch = st.toCharArray();
 		char temp = ch[a];
 		ch[a] = ch[b];
@@ -530,9 +532,7 @@ public class Utility {
 
 	/**
 	 * @param stringToBeReplaced
-	 * @param replacement
-	 *            replaces string 'stringReplaced' in message with given
-	 *            'replacement'
+	 * @param replacement replaces string 'stringReplaced' in message with given 'replacement'
 	 */
 	public void replace(String replaceString, String replacement) {
 		Pattern pattern = Pattern.compile(replaceString);
