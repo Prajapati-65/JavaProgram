@@ -41,4 +41,5 @@ Thumbs.db
 .metadata/
 .recommenders/
 *.*~
+.settings
 
