@@ -6,6 +6,8 @@
 *.exe
 *.o
 *.so
+*.classpath
+*.project
 
 # Packages #
 ############
@@ -19,6 +21,7 @@
 *.rar
 *.tar
 *.zip
+*.settings
 
 # Logs and databases #
 ######################
