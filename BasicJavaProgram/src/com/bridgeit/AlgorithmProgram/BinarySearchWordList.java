@@ -11,8 +11,13 @@ public class BinarySearchWordList {
 	public static void main(String[] args) {
 		Utility u = new Utility();
 		String string = "";
+<<<<<<< HEAD
 		try{
 			File file = new File("/home/bridgeit/abc.txt");
+=======
+		File file = new File("/home/bridgeit/abc.txt");
+		try {
+>>>>>>> 837f30f18163f1f06e208a5303b74c3aeac6e337
 			FileReader fileReader = new FileReader(file);
 			char ch[] = new char[(int) file.length()];
 			fileReader.read(ch);

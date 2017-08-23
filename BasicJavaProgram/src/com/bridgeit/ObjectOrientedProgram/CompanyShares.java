@@ -53,4 +53,17 @@ public class CompanyShares {
 		return name;
 	}
 
+	/**
+	 * @returns number of shares
+	 */
+	public int getNumberOfShares() {
+		return numberOfShares;
+	}
+
+	/**
+	 * @returns price of the each share
+	 */
+	public int getPrice() {
+		return price;
+	}
 }

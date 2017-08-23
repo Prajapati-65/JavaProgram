@@ -1,16 +1,25 @@
 package com.bridgeit.MyUtility;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Random;
+import java.util.Iterator;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 import com.bridgeit.ObjectOrientedProgram.CompanyShares;
 import com.bridgeit.ObjectOrientedProgram.MyLinkedList;
@@ -914,91 +923,4 @@ public class Utility {
 		}
 		System.out.println();
 	}
-
-	/**
-	 * 
-	 * Allots only one card randomly
-	 */
-	int[][] cards = new int[4][13];
-
-	public void allotOneCard(int playerNumber) {
-		Random random = new Random();
-		int suit = random.nextInt(4);
-		int rank = random.nextInt(13);
-
-		if (cards[suit][rank] != 0) {
-			allotOneCard(playerNumber);
-		} else {
-			cards[suit][rank] = playerNumber;
-		}
-	}
-
-	/**
-	 * Prints cards in ascending order
-	 */
-	public void print(int playerNumber) {
-		for (int suit = 0; suit < 4; suit++) {
-			for (int rank = 0; rank < 13; rank++) {
-				if (cards[suit][rank] == playerNumber) {
-					System.out.print(getSuit(suit) + " " + getRank(rank) + "\t");
-				}
-			}
-		}
-		System.out.println("\n");
-	}
-
-	/**
-	 * returns suit name from number
-	 */
-	public String getSuit(int suitNumber) {
-		switch (suitNumber) {
-		case 0:
-			return "Clubs";
-		case 1:
-			return "Diamonds";
-		case 2:
-			return "Hearts";
-		case 3:
-			return "Spades";
-		default:
-			return "";
-		}
-	}
-
-	/**
-	 * returns rank of the card from number
-	 */
-	public String getRank(int rankNumber) {
-		switch (rankNumber) {
-		case 0:
-			return "2";
-		case 1:
-			return "3";
-		case 2:
-			return "4";
-		case 3:
-			return "5";
-		case 4:
-			return "6";
-		case 5:
-			return "7";
-		case 6:
-			return "8";
-		case 7:
-			return "9";
-		case 8:
-			return "10";
-		case 9:
-			return "Jack";
-		case 10:
-			return "Queen";
-		case 11:
-			return "King";
-		case 12:
-			return "Ace";
-		default:
-			return "";
-		}
-	}
-
 }
