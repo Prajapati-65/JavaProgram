@@ -12,10 +12,7 @@ public class PrimeAnagramStack {
 		int inputNumber = utility.inputInteger();
 		for (int i = 2; i <= inputNumber; i++) {
 			if (utility.isPrime(i)) {
-				
-		
-				
-				//System.out.print(i + " ");
+				System.out.print(i + " ");
 			}
 		}
 		System.out.println();
