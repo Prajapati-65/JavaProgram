@@ -376,6 +376,19 @@ public class Utility {
 		windChill = 35.74 + 0.6215 * t + (0.4275 * t - 53.75) * (Math.pow(v, 0.16));
 		System.out.println("WindChill : " + windChill);
 	}
+	
+	/**
+	 * 
+	 */
+	public void distance(int valueOfx,int valueOfy)
+	{
+		int powerofx = powerFunction(valueOfx, 2);
+		System.out.println("Power of number x is :" + powerofx);
+		int powerofy = powerFunction(valueOfy, 2);
+		System.out.println("Power of number y is :" + powerofy);
+		int distance = (powerofx + powerofy);
+		System.out.println("Distance between two origin is  : " + Math.sqrt(distance));
+	}
 
 	/**
 	 * create a method to remove space in a string
