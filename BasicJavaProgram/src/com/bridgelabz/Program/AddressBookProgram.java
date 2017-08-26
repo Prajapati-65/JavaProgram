@@ -12,7 +12,6 @@ public class AddressBookProgram {
 	public void getDetails() {
 		Utility utility = new Utility();
 		System.out.println("Select any one option :");
-		
 		System.out.println("-------------------------");
 		System.out.println("Press 1 to Add a person");
 		System.out.println("Press 2 to Delete a person");
