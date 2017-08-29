@@ -12,6 +12,7 @@ import java.math.BigInteger;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
@@ -132,6 +133,88 @@ public class Utility {
 		return true;
 	}
 
+	/**
+	 * create a method to check palindrome
+	 */
+	public boolean palindromeNumber(int number) {
+		int rem, sum = 0, temp;
+		temp = number;
+		while (number != 0) {
+			rem = number % 10;
+			sum = sum * 10 + rem;
+			number = number / 10;
+		}
+		if (sum == temp)
+			return true;
+		return false;
+	}
+
+	/**
+	 * create a method to ckeck a number is Anagram
+	 */
+	public boolean checkAnagram(String string1 , String string2)
+	{
+		if(string1.length()!=string2.length())
+		{
+			return false;
+		}
+		char[] a = string1.toCharArray();
+		Arrays.sort(a);
+		char[] b = string2.toCharArray();
+		Arrays.sort(b);
+		for (int i = 0; i < a.length; i++) {
+			if(a[i]!=b[i])
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	/*
+	 * create a method to check and print prime Number
+	 */
+
+	public String[] prime(int r) {
+		String[] array = new String[1000];
+		int position = 0;
+		for (int i = 2; i <= r; i++) {
+			boolean b = true;
+			for (int j = 2; j <= i / 2; j++) {
+				if ((i % j) == 0) {
+					b = false;
+					break;
+				}
+			}
+			if (b) {
+				array[position] = String.valueOf(i);
+				position++;
+			}
+		}
+		String[] array1 = new String[position];
+		for (int k = 0; k < position; k++) {
+			array1[k] = array[k];
+		}
+		return array1;
+	}
+
+	/*
+	 * create a method to check and print Palindrome number
+	 */
+	public boolean palindrome(String s) {
+		if (s.length() < 2) {
+			return false;
+		}
+		char[] c = s.toCharArray();
+		int n = c.length;
+		for (int i = 0; i < n; i++) {
+			if (c[i] != c[n - 1 - i]) {
+				return false;
+			}
+		}
+		return true;
+	}
+	
 	/**
 	 * create a read method for integer 2D array
 	 */
@@ -376,12 +459,11 @@ public class Utility {
 		windChill = 35.74 + 0.6215 * t + (0.4275 * t - 53.75) * (Math.pow(v, 0.16));
 		System.out.println("WindChill : " + windChill);
 	}
-	
+
 	/**
 	 * 
 	 */
-	public void distance(int valueOfx,int valueOfy)
-	{
+	public void distance(int valueOfx, int valueOfy) {
 		int powerofx = powerFunction(valueOfx, 2);
 		System.out.println("Power of number x is :" + powerofx);
 		int powerofy = powerFunction(valueOfy, 2);
@@ -1281,7 +1363,8 @@ public class Utility {
 		System.out.println("-----------Welcome-----------");
 		System.out.println("Please enter Patient_Name");
 		String patient_name = scanner.next();
-		System.out.println("Hello : " + patient_name + "\nPlease enter Doctor_Name for which you want to take Appointment");
+		System.out.println(
+				"Hello : " + patient_name + "\nPlease enter Doctor_Name for which you want to take Appointment");
 		String doctername = scanner.next();
 		System.out.println("Enter the data in this format : dd/mm/yyyy");
 		String stringDate = scanner.next();
@@ -1315,7 +1398,7 @@ public class Utility {
 				String doctorName = (String) obj.get("docterName");
 				String date = (String) obj.get("Booking Date ");
 				if (doctorName.equals(doctername) && date.equals(stringDate)) {
-					count++; 
+					count++;
 				}
 			}
 			if (count < 5) {

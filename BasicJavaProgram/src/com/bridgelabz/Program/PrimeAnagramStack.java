@@ -1,7 +1,5 @@
 package com.bridgelabz.Program;
 
-import java.util.Stack;
-
 import com.bridgelabz.Utility.Utility;
 
 public class PrimeAnagramStack {

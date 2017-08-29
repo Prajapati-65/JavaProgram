@@ -5,7 +5,7 @@ import com.bridgelabz.Utility.Utility;
 public class PrimeNumberRange {
 	public static void main(String[] args) {
 		Utility u = new Utility();
-		System.out.println("Enter a number ");
+		System.out.println("Enter the number : ");
 		int inputNumber = u.inputInteger();
 		int count = 0;
 		for (int i = 2; i <= inputNumber; i++) {
