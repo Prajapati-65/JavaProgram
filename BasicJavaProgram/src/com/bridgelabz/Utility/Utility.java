@@ -132,6 +132,26 @@ public class Utility {
 		}
 		return true;
 	}
+	
+	public String[] checkPrime(int limit)
+	{
+		String[] arry = new String[limit];
+		int position=0;
+		for(int i=2; i < limit; i++)
+		{
+             if(isPrime(i)){
+            	arry[position] = String.valueOf(i);
+				position++;
+             }
+		}
+        String[] array1 = new String[position];
+ 		for (int k = 0; k < position; k++) {
+ 			
+ 			array1[k] = arry[k];
+ 		}
+ 		return array1;      
+	}
+	
 
 	/**
 	 * create a method to check palindrome
@@ -158,12 +178,12 @@ public class Utility {
 		{
 			return false;
 		}
-		char[] a = string1.toCharArray();
-		Arrays.sort(a);
-		char[] b = string2.toCharArray();
-		Arrays.sort(b);
-		for (int i = 0; i < a.length; i++) {
-			if(a[i]!=b[i])
+		char[] charArray1= string1.toCharArray();
+		Arrays.sort(charArray1);
+		char[] charArray2 = string2.toCharArray();
+		Arrays.sort(charArray2);
+		for (int i = 0; i < charArray1.length; i++) {
+			if(charArray1[i]!=charArray2[i])
 			{
 				return false;
 			}
@@ -175,13 +195,17 @@ public class Utility {
 	 * create a method to check and print prime Number
 	 */
 
-	public String[] prime(int r) {
+	public String[] prime(int number) 
+	{
 		String[] array = new String[1000];
 		int position = 0;
-		for (int i = 2; i <= r; i++) {
+		for (int i = 2; i <= number; i++)
+		{
 			boolean b = true;
-			for (int j = 2; j <= i / 2; j++) {
-				if ((i % j) == 0) {
+			for (int j = 2; j <= i / 2; j++) 
+			{
+				if ((i % j) == 0) 
+				{
 					b = false;
 					break;
 				}

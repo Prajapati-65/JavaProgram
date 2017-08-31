@@ -9,6 +9,7 @@ public class PrimeAnagramPalindrome {
 		System.out.println("Enter the range : ");
 		int inputNumber = utility.inputInteger();
 		String [] strArray =utility.prime(inputNumber);
+		
 		System.out.println("Anagram in given range of prime numbers are:");
 		for (int i = 0; i < strArray.length; i++) {
 			for (int j = i + 1; j < strArray.length; j++) {
