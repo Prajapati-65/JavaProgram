@@ -14,7 +14,7 @@ public class OrderedList {
 		String[] strings;
 		BufferedReader bufferedReader = null;
 		try {
-			FileReader fileReader = new FileReader("/home/bridgeit/Public/file/ordered.txt");
+			FileReader fileReader = new FileReader("/home/bridgelabz/Public/file/ordered.txt");
 			bufferedReader = new BufferedReader(fileReader);
 			String line;
 			while ((line = bufferedReader.readLine()) != null) {
@@ -52,7 +52,7 @@ public class OrderedList {
 		}
 		try {
 			int size = orderedList.size();
-			PrintWriter printWriter = new PrintWriter("/home/bridgeit/Public/file/ordered.txt");
+			PrintWriter printWriter = new PrintWriter("/home/bridgelabz/Public/file/ordered.txt");
 			for (int i = 0; i < size; i++) {
 				int integer = orderedList.pop(0);
 				printWriter.write(integer + " ");

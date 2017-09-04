@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.math.BigInteger;
+import java.nio.file.FileSystemNotFoundException;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -134,6 +135,27 @@ public class Utility {
 	}
 
 	/**
+	 * @param limit
+	 * @return create a method to String[] prime
+	 */
+	public String[] checkPrime(int limit) {
+		String[] arry = new String[limit];
+		int position = 0;
+		for (int i = 2; i < limit; i++) {
+			if (isPrime(i)) {
+				arry[position] = String.valueOf(i);
+				position++;
+			}
+		}
+		String[] array1 = new String[position];
+		for (int k = 0; k < position; k++) {
+
+			array1[k] = arry[k];
+		}
+		return array1;
+	}
+
+	/**
 	 * create a method to check palindrome
 	 */
 	public boolean palindromeNumber(int number) {
@@ -152,33 +174,30 @@ public class Utility {
 	/**
 	 * create a method to ckeck a number is Anagram
 	 */
-	public boolean checkAnagram(String string1 , String string2)
-	{
-		if(string1.length()!=string2.length())
-		{
+	public boolean checkAnagram(String string1, String string2) {
+		if (string1.length() != string2.length()) {
 			return false;
 		}
-		char[] a = string1.toCharArray();
-		Arrays.sort(a);
-		char[] b = string2.toCharArray();
-		Arrays.sort(b);
-		for (int i = 0; i < a.length; i++) {
-			if(a[i]!=b[i])
-			{
+		char[] charArray1 = string1.toCharArray();
+		Arrays.sort(charArray1);
+		char[] charArray2 = string2.toCharArray();
+		Arrays.sort(charArray2);
+		for (int i = 0; i < charArray1.length; i++) {
+			if (charArray1[i] != charArray2[i]) {
 				return false;
 			}
 		}
 		return true;
 	}
-	
+
 	/*
 	 * create a method to check and print prime Number
 	 */
 
-	public String[] prime(int r) {
+	public String[] prime(int number) {
 		String[] array = new String[1000];
 		int position = 0;
-		for (int i = 2; i <= r; i++) {
+		for (int i = 2; i <= number; i++) {
 			boolean b = true;
 			for (int j = 2; j <= i / 2; j++) {
 				if ((i % j) == 0) {
@@ -214,7 +233,7 @@ public class Utility {
 		}
 		return true;
 	}
-	
+
 	/**
 	 * create a read method for integer 2D array
 	 */
@@ -598,10 +617,10 @@ public class Utility {
 	 *            a function of factorial number
 	 * 
 	 */
-	public int fact(int x) {
+	public int fact(int number) {
 
-		if (x > 1) {
-			return (x * fact(x - 1));
+		if (number > 1) {
+			return (number * fact(number - 1));
 		}
 		return 1;
 	}
@@ -609,39 +628,33 @@ public class Utility {
 	/**
 	 * @param create
 	 *            method of regular Expression
+	 * @throws IOException
 	 * 
 	 */
-	String message = "Hello <<name>>, We have your full " + "name as <<full name>> in our system. \nYour "
-			+ "contact number is 91-xxxxxxxxxx." + " \nPlease,let us know in case of any clarification."
-			+ " \nThank you BridgeLabz 01/01/2016.";
-
 	public void regularExpression() {
-		System.out.print("Enter your first name: ");
-		String firstName = scanner.nextLine();
-		System.out.print("Enter your full name: ");
-		String fullName = scanner.nextLine();
-		System.out.print("Enter your contact number: ");
-		String contactNumber = scanner.nextLine();
-		System.out.print("Enter date in dd/mm/yyyy format: ");
-		String date = scanner.nextLine();
-		replace("<<name>>", firstName);
-		replace("<<full name>>", fullName);
-		replace("xxxxxxxxxx", contactNumber);
-		replace("01/01/2016", date);
-		System.out.println();
-		System.out.println(message);
-	}
-
-	/**
-	 * @param stringToBeReplaced
-	 * @param replacement
-	 *            replaces string 'stringReplaced' in message with given
-	 *            'replacement'
-	 */
-	public void replace(String replaceString, String replacement) {
-		Pattern pattern = Pattern.compile(replaceString);
-		Matcher matcher = pattern.matcher(message);
-		message = matcher.replaceFirst(replacement);
+		File file = new File("/home/bridgelabz/Public/file/regularExpression.txt");
+		try {
+			FileReader filereader = new FileReader(file);
+			int length = (int) file.length();
+			char[] charArray = new char[length];
+			filereader.read(charArray);
+			String string = new String(charArray);
+			System.out.print("Enter your first name: ");
+			String firstName = scanner.nextLine();
+			System.out.print("Enter your full name: ");
+			String fullName = scanner.nextLine();
+			System.out.print("Enter your contact number: ");
+			String contactNumber = scanner.nextLine();
+			System.out.print("Enter date in dd/mm/yyyy format: ");
+			String date = scanner.nextLine();
+			string = string.replaceAll("<<name>>", firstName);
+			string = string.replaceAll("<<full name>>", fullName);
+			string = string.replaceAll("xxxxxxxxxx", contactNumber);
+			string = string.replaceAll("01/01/2016", date);
+			System.out.println(string);
+		} catch (FileSystemNotFoundException | IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**

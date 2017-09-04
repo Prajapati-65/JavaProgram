@@ -5,6 +5,7 @@ import com.bridgelabz.Utility.Utility;
 public class StockReport {
 
 	public static void main(String[] args) {
+		
 		Utility utility = new Utility();
 		System.out.println("Enter the size of stock");
 		int size = utility.inputInteger();

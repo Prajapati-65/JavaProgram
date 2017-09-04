@@ -35,7 +35,7 @@ public class InventoryManagement {
 				System.out.println("Your amount is :" + amount1);
 			}
 			else if (number == 3) {
-				System.out.println("HOw much weight you want in kg");
+				System.out.println("How much weight you want in kg");
 				int weight2 = utility.inputInteger();
 				int amount2 = weight2 * 25;
 				System.out.println("Your amount is :" + amount2);
