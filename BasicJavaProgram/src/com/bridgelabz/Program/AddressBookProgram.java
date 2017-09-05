@@ -8,7 +8,7 @@ public class AddressBookProgram {
 		AddressBookProgram addressBook = new AddressBookProgram();
 		addressBook.getDetails();
 	}
-	
+
 	public void getDetails() {
 		Utility utility = new Utility();
 		System.out.println("Select any one option :");

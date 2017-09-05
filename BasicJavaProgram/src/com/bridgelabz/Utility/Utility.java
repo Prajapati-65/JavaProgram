@@ -986,7 +986,7 @@ public class Utility {
 	}
 
 	MyLinkedList<CompanyShares> list = new MyLinkedList<CompanyShares>();
-
+	
 	public void startCompanyShare() {
 		System.out.print("Type add to add the stock and remove to remove the stock: ");
 		String move = scanner.next();

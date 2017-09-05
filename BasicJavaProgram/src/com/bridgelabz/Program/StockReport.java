@@ -5,7 +5,6 @@ import com.bridgelabz.Utility.Utility;
 public class StockReport {
 
 	public static void main(String[] args) {
-		
 		Utility utility = new Utility();
 		System.out.println("Enter the size of stock");
 		int size = utility.inputInteger();
@@ -32,7 +31,6 @@ public class StockReport {
 		for (int i = 0; i < size; i++) {
 			allTotal = allTotal + total[i];
 		}
-
 		System.out.println("\nTotal value of all stock " + size + " stock is " + allTotal);
 	}
 }
