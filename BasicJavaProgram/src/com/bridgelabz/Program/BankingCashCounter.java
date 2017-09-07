@@ -4,6 +4,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+/**
+ * @author OmPrajapati
+ *
+ */
 public class BankingCashCounter {
 
 	Queue queue = new LinkedList<>();

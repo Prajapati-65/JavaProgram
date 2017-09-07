@@ -1,5 +1,10 @@
 package com.bridgelabz.Program;
 
+/**
+ * @author OmPrajapati
+ *
+ * @param <Genric Type>
+ */
 public class MyStack<T> {
 	MyLinkedList<T> linkedList;
 

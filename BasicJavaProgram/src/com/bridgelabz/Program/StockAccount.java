@@ -10,6 +10,10 @@ import java.util.Date;
 import java.util.Scanner;
 
 
+/**
+ * @author OmPrajapati
+ *
+ */
 public class StockAccount {
 
 	public static void main(String[] args) {

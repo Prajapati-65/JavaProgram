@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 import com.bridgelabz.Utility.Utility;
 
+/**
+ * @author OmPrajapati
+ *
+ */
 public class MergeSortProgram {
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);

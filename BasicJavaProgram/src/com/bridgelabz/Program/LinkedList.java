@@ -1,5 +1,10 @@
 package com.bridgelabz.Program;
 
+/**
+ * @author OmPrajapati
+ *
+ * @param <Genric Type>
+ */
 public class LinkedList<T extends Comparable<T>> {
 	Node<T> head;
 	Node<T> current;

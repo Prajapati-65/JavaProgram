@@ -1,5 +1,10 @@
 package com.bridgelabz.Program;
 
+/**
+ * @author OmPrajapati
+ *
+ * @param <Genric Type>
+ */
 public class MyDeque<T> {
 
 	MyLinkedList<T> myLinkedList;

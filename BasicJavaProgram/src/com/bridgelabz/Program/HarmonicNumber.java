@@ -2,6 +2,10 @@ package com.bridgelabz.Program;
 
 import com.bridgelabz.Utility.Utility;
 
+/**
+ * @author OmPrajapati
+ *
+ */
 public class HarmonicNumber {
 	
 	public static void main(String[] args) {

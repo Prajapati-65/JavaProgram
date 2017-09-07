@@ -2,6 +2,10 @@ package com.bridgelabz.Program;
 
 import com.bridgelabz.Utility.Utility;
 
+/**
+ * @author OmPrajapati
+ *
+ */
 public class DeckOfCards {
 
 	public static void main(String[] args) {

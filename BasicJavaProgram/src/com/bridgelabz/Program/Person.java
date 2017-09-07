@@ -2,6 +2,10 @@ package com.bridgelabz.Program;
 
 import org.json.simple.JSONObject;
 
+/**
+ * @author OmPrajapati
+ *
+ */
 public class Person {
 	
 	String firstName;

@@ -30,6 +30,10 @@ import com.bridgelabz.Program.CompanyShares;
 import com.bridgelabz.Program.MyLinkedList;
 import com.bridgelabz.Program.Person;
 
+/**
+ * @author OmPrajapati
+ *
+ */
 public class Utility {
 
 	Scanner scanner = new Scanner(System.in);
@@ -87,8 +91,10 @@ public class Utility {
 		return 0.0;
 	}
 
+	
 	/**
-	 * create a method and check leap year or not
+	 * @param input year
+	 * @return boolean
 	 */
 	public boolean leapYearCheaker(int year) {
 		if (year > 1000) {
@@ -99,8 +105,10 @@ public class Utility {
 		return false;
 	}
 
+
 	/**
-	 * create a method power of any number
+	 * @param integer
+	 * @return integer
 	 */
 	public int poworOfTwo(int integer) {
 		int power = 1;
@@ -112,7 +120,9 @@ public class Utility {
 	}
 
 	/**
-	 * create a method Harmonic Number
+	 * @param input number
+	 * @param create a method HarmonicNumber
+	 * @return double
 	 */
 	public double harmonicNumber(int number) {
 		double sum = 0.0;
@@ -123,7 +133,12 @@ public class Utility {
 	}
 
 	/**
-	 * create a method of prime number
+	 * 
+	 */
+	/**
+	 * @param input number
+	 * @param create a method of prime number
+	 * @return boolean
 	 */
 	public boolean isPrime(int number) {
 		for (int i = 2; i < number; i++) {
@@ -135,7 +150,7 @@ public class Utility {
 	}
 
 	/**
-	 * @param limit
+	 * @param input limit
 	 * @return create a method to String[] prime
 	 */
 	public String[] checkPrime(int limit) {
@@ -156,7 +171,9 @@ public class Utility {
 	}
 
 	/**
-	 * create a method to check palindrome
+	 * @param input number
+	 * @param create a method to check palindrome
+	 * @return boolean
 	 */
 	public boolean palindromeNumber(int number) {
 		int rem, sum = 0, temp;
@@ -172,7 +189,10 @@ public class Utility {
 	}
 
 	/**
-	 * create a method to ckeck a number is Anagram
+	 * @param input First string
+	 * @param input Second string
+	 * @param  create a method to Anagram
+	 * @return boolean
 	 */
 	public boolean checkAnagram(String string1, String string2) {
 		if (string1.length() != string2.length()) {
@@ -190,10 +210,10 @@ public class Utility {
 		return true;
 	}
 
-	/*
-	 * create a method to check and print prime Number
+	/**
+	 * @param input number
+	 * @return String Array
 	 */
-
 	public String[] prime(int number) {
 		String[] array = new String[1000];
 		int position = 0;
@@ -220,6 +240,10 @@ public class Utility {
 	/*
 	 * create a method to check and print Palindrome number
 	 */
+	/**
+	 * @param input String 
+	 * @return boolean
+	 */
 	public boolean palindrome(String s) {
 		if (s.length() < 2) {
 			return false;
@@ -235,7 +259,7 @@ public class Utility {
 	}
 
 	/**
-	 * create a read method for integer 2D array
+	 * @return integer Array
 	 */
 	public int[][] readArrayInt() {
 		System.out.println("Enter M of rows : ");
@@ -253,8 +277,9 @@ public class Utility {
 		return a;
 	}
 
+
 	/**
-	 * create a display method of 2D array
+	 * @param input integer array
 	 */
 	public void displayInt(int a[][]) {
 		for (int i = 0; i < a.length; i++) {
@@ -266,7 +291,8 @@ public class Utility {
 	}
 
 	/**
-	 * create a read method for Double 2D array
+	 * @param create a read method for Double 2D array
+	 * @return double array
 	 */
 	public double[][] readArrayDouble() {
 		System.out.println("Enter M of rows : ");
@@ -285,7 +311,8 @@ public class Utility {
 	}
 
 	/**
-	 * create a display method for Double 2D array
+	 * @param double integer array
+	 * @param create a display method for Double 2D array
 	 */
 	public void displayDouble(double a[][]) {
 		for (int i = 0; i < a.length; i++) {
@@ -297,21 +324,27 @@ public class Utility {
 	}
 
 	/**
-	 * create methods for Right padding
+	 * @param input String 
+	 * @param input number
+	 * @param create methods for Right padding
+	 * @return String
 	 */
-	public static String padRight(String s, int n) {
-		return String.format("%1$-" + n + "s", s);
+	public static String padRight(String string, int number) {
+		return String.format("%1$-" + number + "s", string);
 	}
 
 	/**
-	 * create methods for Left padding
+	 * @param input String 
+	 * @param input number
+	 * @param create methods for Left padding
+	 * @return String
 	 */
-	public static String padLeft(String s, int n) {
-		return String.format("%1$" + n + "s", s);
+	public static String padLeft(String string, int number) {
+		return String.format("%1$" + number + "s", string);
 	}
 
 	/**
-	 * create a read method for boolean 2D array
+	 * @return boolean array
 	 */
 	public boolean[][] readArrayBoolean() {
 
@@ -331,7 +364,7 @@ public class Utility {
 	}
 
 	/**
-	 * create a display method for boolean 2D array
+	 * @param input boolean array
 	 */
 	public void displayBoolean(boolean a[][]) {
 		for (int i = 0; i < a.length; i++) {
@@ -343,7 +376,9 @@ public class Utility {
 	}
 
 	/**
-	 * create a method sum of three integer number is zero
+	 * @param input integer array
+	 * @param create a method sum of three integer number is zero
+	 * @return integer
 	 */
 	public int sumofthree(int a[]) {
 		int count = 0;
@@ -361,7 +396,8 @@ public class Utility {
 	}
 
 	/**
-	 * create a method read an Array
+	 * @param create a method read an Array
+	 * @return integer array
 	 */
 	public int[] readArray() {
 		System.out.print("Enter the size of array");
@@ -375,7 +411,8 @@ public class Utility {
 	}
 
 	/**
-	 * create a method display an Array
+	 * @param input integer array
+	 * @param create a method display an Array
 	 */
 	public void display(int a[]) {
 		for (int i = 0; i < a.length; i++) {
@@ -398,9 +435,13 @@ public class Utility {
 			}
 		}
 	}
-
+	
 	/**
-	 * create a method to swap the string
+	 * @param input string st
+	 * @param input number a
+	 * @param input number b
+	 * @param create a method to swap the string
+	 * @return String 
 	 */
 	public String swap(String st, int a, int b) {
 		char[] ch = st.toCharArray();
@@ -416,7 +457,7 @@ public class Utility {
 	long startTime = 0;
 	long stopTime = 0;
 	boolean running = false;
-
+	
 	public void start() {
 		this.startTime = System.currentTimeMillis();
 		this.running = true;
@@ -427,6 +468,9 @@ public class Utility {
 		this.running = false;
 	}
 
+	/**
+	 * @return boolean
+	 */
 	public long getElapsedTime() {
 		long elapsed;
 		if (running) {
@@ -438,17 +482,23 @@ public class Utility {
 	}
 
 	/**
-	 * create a power function
+	 * @param input integer firstnumber
+	 * @param input integer secondnumber
+	 * @param create a power function
+	 * @return integer
 	 */
-	public int powerFunction(int a, int n) {
-		if (n == 0) {
+	public int powerFunction(int firstnumber, int secondnumber) {
+		if (secondnumber == 0) {
 			return 1;
 		}
-		return (a * powerFunction(a, n - 1));
+		return (firstnumber * powerFunction(firstnumber, secondnumber - 1));
 	}
 
 	/**
-	 * create a method to find root
+	 * @param input integer a
+	 * @param input integer b
+	 * @param input integer c
+	 * @param create a method to find root
 	 */
 	public void findRoot(int a, int b, int c) {
 		double delta, root1, root2;
@@ -461,7 +511,9 @@ public class Utility {
 	}
 
 	/**
-	 * create a method of calculateWindChill
+	 * @param input integer t
+	 * @param input integer v
+	 * @param create a method of calculateWindChill
 	 */
 	public void calculateWindChill(int t, int v) {
 		double windChill;
@@ -480,7 +532,9 @@ public class Utility {
 	}
 
 	/**
-	 * 
+	 * @param input integer valueOfx
+	 * @param  input integer valueOfy
+	 * @param create a method distance between two origin
 	 */
 	public void distance(int valueOfx, int valueOfy) {
 		int powerofx = powerFunction(valueOfx, 2);
@@ -556,8 +610,9 @@ public class Utility {
 	}
 
 	/**
-	 * 
-	 * string representing binary of number
+	 * @param input integer  n
+	 * @param string representing binary of number
+	 * @return String
 	 */
 	public String toBinary(int n) {
 		if (n == 0) {
@@ -986,7 +1041,6 @@ public class Utility {
 	}
 
 	MyLinkedList<CompanyShares> list = new MyLinkedList<CompanyShares>();
-	
 	public void startCompanyShare() {
 		System.out.print("Type add to add the stock and remove to remove the stock: ");
 		String move = scanner.next();
@@ -1121,6 +1175,10 @@ public class Utility {
 		}
 	}
 
+	
+	/**
+	 * @param create a method to add a person 
+	 */
 	public void addAPerson() {
 		System.out.print("Enter first name :");
 		String firstName = scanner.next();
@@ -1140,8 +1198,41 @@ public class Utility {
 		JSONObject jsonObject = person.toJsonObject();
 		writeBook(jsonObject);
 	}
+	
+	
+	/**
+	 * @param JSONObject Object
+	 */
+	public void writeBook(JSONObject jsonObject) {
+		JSONParser parser = new JSONParser();
+		JSONArray bookArray = null;
+		File file = new File("/home/bridgelabz/Public/file/addressbook.json");
+		if (!file.exists()) {
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			bookArray = new JSONArray();
+		} else {
+			try {
+				bookArray = (JSONArray) parser.parse(new FileReader("/home/bridgelabz/Public/file/addressbook.json"));
+			} catch (IOException | org.json.simple.parser.ParseException e) {
+				e.printStackTrace();
+			}
+		}
+		bookArray.add(jsonObject);
+		printWriter(bookArray);
+		System.out.println("Contact added successfully");
+	}
 
-	/** Edits a person;s information **/
+
+	
+	/**
+	 * @param JSONObject object
+	 * @param JSONArray bookArray
+	 * @param input integre i
+	 */
 	public void edit(JSONObject jsonObject, JSONArray bookArray, int i) {
 		System.out.println("What do you want to edit ?");
 		System.out.println("1. Address");
@@ -1157,13 +1248,11 @@ public class Utility {
 			String city = scanner.next();
 			String state = scanner.next();
 			String pincode = scanner.next();
-
 			jsonObject.put("Address", address);
 			jsonObject.put("City", city);
 			jsonObject.put("State", state);
 			jsonObject.put("pincode", pincode);
 			break;
-
 		case 2:
 			System.out.println("Enter phone number: ");
 			String phoneNumber = scanner.next();
@@ -1176,15 +1265,20 @@ public class Utility {
 		System.out.println("Contact updated successfully");
 	}
 
-	/** Deletes a person's information **/
-	void delete(JSONArray bookArray, int i) {
+	/**
+	 * @param JSONArray bookArray
+	 * @param input integer i
+	 */
+	public void delete(JSONArray bookArray, int i) {
 		bookArray.remove(i);
 		printWriter(bookArray);
 		System.out.println("Contact deleted successfully");
 	}
 
-	/** Displays person's record **/
-	void search(JSONObject jsonObject) {
+	/**
+	 * @param JSONObject onbject
+	 */
+	public void search(JSONObject jsonObject) {
 		System.out.println("Name:\n" + jsonObject.get("First Name") + " " + jsonObject.get("Last Name"));
 		System.out.println("Address:\n" + jsonObject.get("Address"));
 		System.out.print(jsonObject.get("City") + ", ");
@@ -1193,32 +1287,9 @@ public class Utility {
 		System.out.println("Phone Number:\n" + jsonObject.get("Phone Number"));
 	}
 
-	/** Updates Address book **/
-	public void writeBook(JSONObject jsonObject) {
-		JSONParser parser = new JSONParser();
-		JSONArray bookArray = null;
-
-		File file = new File("/home/bridgelabz/Public/file/addressbook.txt");
-		if (!file.exists()) {
-			try {
-				file.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-			bookArray = new JSONArray();
-		} else {
-			try {
-				bookArray = (JSONArray) parser.parse(new FileReader("/home/bridgelabz/Public/file/addressbook.txt"));
-			} catch (IOException | org.json.simple.parser.ParseException e) {
-				e.printStackTrace();
-			}
-		}
-		bookArray.add(jsonObject);
-		printWriter(bookArray);
-		System.out.println("Contact added successfully");
-	}
-
-	/** Reads json file and adds information to json array **/
+	/**
+	 * @param input integer choice
+	 */
 	public void commonPart(int choice) {
 		JSONParser parser = new JSONParser();
 		String firstName = scanner.next();
@@ -1226,7 +1297,7 @@ public class Utility {
 		JSONArray bookArray = null;
 
 		try {
-			bookArray = (JSONArray) parser.parse(new FileReader("/home/bridgelabz/Public/file/addressbook.txt"));
+			bookArray = (JSONArray) parser.parse(new FileReader("/home/bridgelabz/Public/file/addressbook.json"));
 		} catch (IOException | org.json.simple.parser.ParseException e) {
 			e.printStackTrace();
 		}
@@ -1257,10 +1328,12 @@ public class Utility {
 		}
 	}
 
-	/** Writes all the data to a file **/
+	/**
+	 * @param JSONArray object
+	 */
 	public void printWriter(JSONArray bookArray) {
 		try {
-			PrintWriter printWriter = new PrintWriter("/home/bridgelabz/Public/file/addressbook.txt");
+			PrintWriter printWriter = new PrintWriter("/home/bridgelabz/Public/file/addressbook.json");
 			printWriter.write(bookArray.toJSONString());
 			printWriter.close();
 		} catch (FileNotFoundException e) {
@@ -1268,6 +1341,9 @@ public class Utility {
 		}
 	}
 
+	/**
+	 * @param create a method to add doctor
+	 */
 	public void doctorAddition() {
 		System.out.println("Enter no. of doctors :");
 		int num0fDoctor = scanner.nextInt();
@@ -1300,6 +1376,9 @@ public class Utility {
 		}
 	}
 
+	/**
+	 * @param create a method to search a doctor
+	 */
 	public void searchToDoctor() {
 		try {
 			JSONParser parser = new JSONParser();
@@ -1320,6 +1399,9 @@ public class Utility {
 		}
 	}
 
+	/**
+	 * @param create a method to search a patient
+	 */
 	public void searchToPatient() {
 		System.out.println("Enter Name Of Patient");
 		String name = scanner.next();
@@ -1340,6 +1422,9 @@ public class Utility {
 		}
 	}
 
+	/**
+	 * @param create a method to addition of patient
+	 */
 	public void patientAddition() {
 		System.out.println("Enter no. of Patient");
 		int num = scanner.nextInt();
@@ -1372,6 +1457,9 @@ public class Utility {
 		}
 	}
 
+	/**
+	 * @param create a method to doctor appointment
+	 */
 	public void doctorAppointment() {
 		System.out.println("-----------Welcome-----------");
 		System.out.println("Please enter Patient_Name");

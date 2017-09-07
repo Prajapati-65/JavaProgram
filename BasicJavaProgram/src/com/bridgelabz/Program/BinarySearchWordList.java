@@ -6,6 +6,10 @@ import java.io.IOException;
 
 import com.bridgelabz.Utility.Utility;
 
+/**
+ * @author OmPrajapati
+ *
+ */
 public class BinarySearchWordList {
 	
 	public static void main(String[] args) {

@@ -2,14 +2,18 @@ package com.bridgelabz.Program;
 
 import com.bridgelabz.Utility.Utility;
 
+/**
+ * @author OmPrajapati
+ *
+ */
 public class AddressBookProgram {
 
 	public static void main(String[] args) {
-		AddressBookProgram addressBook = new AddressBookProgram();
-		addressBook.getDetails();
+		AddressBookProgram address = new AddressBookProgram();
+		address.test();
 	}
-
-	public void getDetails() {
+	public void test()
+	{
 		Utility utility = new Utility();
 		System.out.println("Select any one option :");
 		System.out.println("-------------------------");
@@ -24,24 +28,25 @@ public class AddressBookProgram {
 		case 1:
 			utility.addAPerson();
 			System.out.println("\n");
-			getDetails();
+			test();
 			break;
 		case 2:
 			System.out.print("Enter first and last name of the person to delete the contact: ");
 			utility.commonPart(choice);
 			System.out.println("\n");
-			getDetails();
+			test();
 			break;
 		case 3:
 			System.out.print("Enter first and last name of the person to search: ");
 			utility.commonPart(choice);
 			System.out.println("\n");
+			test();
 			break;
 		case 4:
 			System.out.print("Enter first and last name of the person to edit the contact: ");
 			utility.commonPart(choice);
 			System.out.println("\n");
-			getDetails();
+			test();
 			break;
 		default:
 			break;

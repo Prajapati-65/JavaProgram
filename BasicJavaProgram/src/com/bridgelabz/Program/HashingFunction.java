@@ -9,6 +9,10 @@ import java.util.Scanner;
 
 import com.bridgelabz.Utility.Utility;
 
+/**
+ * @author OmPrajapati
+ *
+ */
 public class HashingFunction {
 
 	public static void main(String[] args) throws IOException {

@@ -7,6 +7,10 @@ import org.json.simple.parser.JSONParser;
 
 import com.bridgelabz.Utility.Utility;
 
+/**
+ * @author OmPrajapati
+ *
+ */
 public class InventoryManagement {
 
 	public static void main(String[] args) {

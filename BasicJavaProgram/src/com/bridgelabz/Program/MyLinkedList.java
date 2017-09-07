@@ -1,5 +1,10 @@
 package com.bridgelabz.Program;
 
+/**
+ * @author OmPrajapati
+ *
+ * @param <Genric type>
+ */
 public class MyLinkedList<T> {
 	Node<T> head;
 	Node<T> current;
