@@ -148,6 +148,26 @@ public class Utility {
 		}
 		return true;
 	}
+	
+	public String[] checkPrime(int limit)
+	{
+		String[] arry = new String[limit];
+		int position=0;
+		for(int i=2; i < limit; i++)
+		{
+             if(isPrime(i)){
+            	arry[position] = String.valueOf(i);
+				position++;
+             }
+		}
+        String[] array1 = new String[position];
+ 		for (int k = 0; k < position; k++) {
+ 			
+ 			array1[k] = arry[k];
+ 		}
+ 		return array1;      
+	}
+	
 
 	/**
 	 * @param input limit
@@ -198,12 +218,21 @@ public class Utility {
 		if (string1.length() != string2.length()) {
 			return false;
 		}
+<<<<<<< HEAD
 		char[] charArray1 = string1.toCharArray();
+=======
+		char[] charArray1= string1.toCharArray();
+>>>>>>> 9663d15798b30a845e99e0f8b435ec678ca3a968
 		Arrays.sort(charArray1);
 		char[] charArray2 = string2.toCharArray();
 		Arrays.sort(charArray2);
 		for (int i = 0; i < charArray1.length; i++) {
+<<<<<<< HEAD
 			if (charArray1[i] != charArray2[i]) {
+=======
+			if(charArray1[i]!=charArray2[i])
+			{
+>>>>>>> 9663d15798b30a845e99e0f8b435ec678ca3a968
 				return false;
 			}
 		}
@@ -214,13 +243,28 @@ public class Utility {
 	 * @param input number
 	 * @return String Array
 	 */
+<<<<<<< HEAD
+=======
+
+<<<<<<< HEAD
+>>>>>>> 151bd8227db993dbc42c6c8aa915dcb4590ecd1c
 	public String[] prime(int number) {
 		String[] array = new String[1000];
 		int position = 0;
 		for (int i = 2; i <= number; i++) {
+=======
+	public String[] prime(int number) 
+	{
+		String[] array = new String[1000];
+		int position = 0;
+		for (int i = 2; i <= number; i++)
+		{
+>>>>>>> 9663d15798b30a845e99e0f8b435ec678ca3a968
 			boolean b = true;
-			for (int j = 2; j <= i / 2; j++) {
-				if ((i % j) == 0) {
+			for (int j = 2; j <= i / 2; j++) 
+			{
+				if ((i % j) == 0) 
+				{
 					b = false;
 					break;
 				}
