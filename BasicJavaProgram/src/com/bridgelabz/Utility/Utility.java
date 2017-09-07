@@ -1199,7 +1199,6 @@ public class Utility {
 		writeBook(jsonObject);
 	}
 	
-	
 	/**
 	 * @param JSONObject Object
 	 */
@@ -1276,7 +1275,7 @@ public class Utility {
 	}
 
 	/**
-	 * @param JSONObject onbject
+	 * @param JSONObject object
 	 */
 	public void search(JSONObject jsonObject) {
 		System.out.println("Name:\n" + jsonObject.get("First Name") + " " + jsonObject.get("Last Name"));
@@ -1295,13 +1294,11 @@ public class Utility {
 		String firstName = scanner.next();
 		String lastName = scanner.next();
 		JSONArray bookArray = null;
-
 		try {
 			bookArray = (JSONArray) parser.parse(new FileReader("/home/bridgelabz/Public/file/addressbook.json"));
 		} catch (IOException | org.json.simple.parser.ParseException e) {
 			e.printStackTrace();
 		}
-
 		Iterator iterator = bookArray.iterator();
 		int i = 0;
 		boolean b = false;

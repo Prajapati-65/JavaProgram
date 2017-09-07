@@ -11,7 +11,6 @@ public class Binary {
 		Utility utility = new Utility();
 		System.out.println("Enter a number :");
 		int inputNumber = utility.inputInteger();
-		
 		String binary = utility.toBinary(inputNumber);
 		char ch[] = binary.toCharArray();
 		System.out.println("Binary represention : ");
