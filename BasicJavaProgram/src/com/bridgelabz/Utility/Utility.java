@@ -1187,7 +1187,6 @@ public class Utility {
 		System.out.print("Enter the address: ");
 		scanner.nextLine();
 		String address = scanner.nextLine();
-		// System.out.println("\n");
 		System.out.print("Enter City name , State and PinCode :");
 		String city = scanner.next();
 		String state = scanner.next();
@@ -1216,7 +1215,7 @@ public class Utility {
 		} else {
 			try {
 				bookArray = (JSONArray) parser.parse(new FileReader("/home/bridgelabz/Public/file/addressbook.json"));
-			} catch (IOException | org.json.simple.parser.ParseException e) {
+			} catch (IOException |org.json.simple.parser.ParseException e) {
 				e.printStackTrace();
 			}
 		}
@@ -1230,7 +1229,7 @@ public class Utility {
 	/**
 	 * @param JSONObject object
 	 * @param JSONArray bookArray
-	 * @param input integre i
+	 * @param input integer i
 	 */
 	public void edit(JSONObject jsonObject, JSONArray bookArray, int i) {
 		System.out.println("What do you want to edit ?");
